@@ -9,4 +9,9 @@
   <pageDef contentMRef="/oracle/webcenter/portalapp/pages/myCourses.jspx"
            hidden="false" shared="false" hasSubPages="true" id="myCourses"
            overridePolicy="true"/>
+  <pageDef contentMRef="/oracle/webcenter/portalapp/pages/courses.jspx"
+           hidden="false" shared="false" hasSubPages="false" id="courses"/>
+  <pageDef contentMRef="/oracle/webcenter/portalapp/pages/trainingDetail.jspx"
+           hidden="true" shared="false" hasSubPages="false"
+           id="trainingDetail"/>
 </pagesDef>

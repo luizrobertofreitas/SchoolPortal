@@ -188,6 +188,34 @@
             <customAttribute name="view-id" seeded="true" value="oracle.webcenter.content.templates.default.list.accordion" visible="ALWAYS"/>
          </customAttributes>
       </resource>
+      <resource contentDir="/oracle/webcenter/portalapp/shared/" createdBy="system" createdDate="2014-05-14T10:57:34.701-03:00" description="" displayName="Training List Item" guid="gsradde5983_a936_4d85_8540_ebbf348c3fb6" jspx="/oracle/webcenter/portalapp/contenttemplates/training-list-item.jsff" modifiedBy="system" modifiedDate="2014-05-14T10:57:34.701-03:00" resourceBundle="oracle.webcenter.framework.translations.TranslationsMDSResourceBundle" seeded="false" type="contentPresenter" usesCustomSecurity="false" version="11.1.1.4.0" visible="TRUE">
+         <customAttributes>
+            <customAttribute name="template-type" seeded="false" value="single" visible="ALWAYS"/>
+            <customAttribute name="view-id" seeded="false" value="trainingListItem" visible="ALWAYS"/>
+            <customAttribute name="content-repository" seeded="false" value="*" visible="ALWAYS"/>
+            <customAttribute name="content-type-name" seeded="false" value="*" visible="ALWAYS"/>
+            <customAttribute name="content-type-is-defaultview" seeded="false" value="true" visible="ALWAYS"/>
+         </customAttributes>
+      </resource>
+      <resource contentDir="/oracle/webcenter/portalapp/shared/" createdBy="system" createdDate="2014-05-14T10:59:24.52-03:00" description="" displayName="Training List" guid="gsrcc289db3_a12b_4afb_b2d3_24dd3034035e" jspx="/oracle/webcenter/portalapp/contenttemplates/training-list.jsff" modifiedBy="system" modifiedDate="2014-05-14T10:59:24.52-03:00" resourceBundle="oracle.webcenter.framework.translations.TranslationsMDSResourceBundle" seeded="false" type="contentPresenter" usesCustomSecurity="false" version="11.1.1.4.0" visible="TRUE">
+         <customAttributes>
+            <customAttribute name="template-type" seeded="false" value="list" visible="ALWAYS"/>
+            <customAttribute name="view-id" seeded="false" value="trainingList" visible="ALWAYS"/>
+            <customAttribute name="category-id" seeded="false" value="oracle.webcenter.content.templates.default.category" visible="ALWAYS"/>
+            <customAttribute name="category-name" seeded="false" value="Default Templates" visible="ALWAYS"/>
+            <customAttribute name="category-is-defaultview" seeded="false" value="true" visible="ALWAYS"/>
+            <customAttribute name="category-is-default" seeded="false" value="true" visible="ALWAYS"/>
+         </customAttributes>
+      </resource>
+      <resource contentDir="/oracle/webcenter/portalapp/shared/" createdBy="system" createdDate="2014-05-14T11:03:28.313-03:00" description="" displayName="Training Item" guid="gsr10cc3f36_05c8_42f5_aaa0_ae4afd1c5052" jspx="/oracle/webcenter/portalapp/contenttemplates/training-item.jsff" modifiedBy="system" modifiedDate="2014-05-14T11:03:28.314-03:00" resourceBundle="oracle.webcenter.framework.translations.TranslationsMDSResourceBundle" seeded="false" type="contentPresenter" usesCustomSecurity="false" version="11.1.1.4.0" visible="TRUE">
+         <customAttributes>
+            <customAttribute name="template-type" seeded="false" value="single" visible="ALWAYS"/>
+            <customAttribute name="view-id" seeded="false" value="trainingItem" visible="ALWAYS"/>
+            <customAttribute name="content-repository" seeded="false" value="*" visible="ALWAYS"/>
+            <customAttribute name="content-type-name" seeded="false" value="*" visible="ALWAYS"/>
+            <customAttribute name="content-type-is-defaultview" seeded="false" value="true" visible="ALWAYS"/>
+         </customAttributes>
+      </resource>
    </resourceType>
    <resourceType name="resourceCatalog" resourceBundle="">
       <resource contentDir="/oracle/webcenter/portalapp/shared" createdBy="system" createdDate="2011-02-08T15:57:55.906-08:00" description="Default Resource Catalog" displayName="Default Resource Catalog" guid="gsr6c988f94_2c8d_486d_aed1_ba3ff44465c1" metadataFile="/oracle/webcenter/portalapp/catalogs/default-catalog.xml" modifiedBy="system" modifiedDate="2011-02-08T15:57:55.906-08:00" resourceBundle="oracle.webcenter.framework.translations.TranslationsMDSResourceBundle" seeded="true" usesCustomSecurity="false" version="11.1.1.4.0" visible="TRUE">

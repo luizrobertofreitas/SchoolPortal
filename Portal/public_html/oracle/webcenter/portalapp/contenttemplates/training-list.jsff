@@ -1,0 +1,17 @@
+<?xml version = '1.0'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:dt="http://xmlns.oracle.com/webcenter/content/templates"
+          xmlns:f="http://java.sun.com/jsf/core">
+
+    <dt:contentListTemplateDef var="nodes">
+        <af:panelGroupLayout layout="vertical" id="list" valign="top">
+            <af:iterator var="node" value="#{nodes}" id="i1">
+                <dt:contentTemplate node="#{node}" view="trainingListItem" nodesHint="#{nodes}" id="trainingItem"/>
+            </af:iterator>
+            <f:facet name="separator">
+                <af:spacer id="sp1" height="10px"/>
+            </f:facet>
+        </af:panelGroupLayout>
+    </dt:contentListTemplateDef>
+</jsp:root>

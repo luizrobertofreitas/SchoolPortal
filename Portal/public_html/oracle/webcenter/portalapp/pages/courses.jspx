@@ -2,13 +2,20 @@
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
           xmlns:f="http://java.sun.com/jsf/core"
           xmlns:h="http://java.sun.com/jsf/html"
-          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:pe="http://xmlns.oracle.com/adf/pageeditor"
+          xmlns:dt="http://xmlns.oracle.com/webcenter/content/templates">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <f:view>
     <af:document id="d1">
-      <af:form id="f1">
+      <af:form id="f1" usesUpload="true">
         <af:pageTemplate value="#{bindings.pageTemplateBinding.templateModel}" id="pt1">
-          <f:facet name="content"/>
+          <f:facet name="content">
+            <af:panelGroupLayout layout="vertical" id="pgl1">
+                <af:goLink id="create" destination="http://192.168.57.27:16200/cs/resources/wcm/custom/sitestudio/contentwizard/webcenter/contentwizard.hcsp?dDocType=Document&amp;cpRegDef=RD_SCHOOL_TRAINING&amp;dSecurityGroup=Public&amp;cpIframe=true&amp;forceLogin=1" targetFrame="_blank" text="Create New"/>
+                <af:region value="#{bindings.doclibcontentpresenter1.regionModel}" id="r1"/>
+            </af:panelGroupLayout>
+          </f:facet>
         </af:pageTemplate>
       </af:form>
     </af:document>

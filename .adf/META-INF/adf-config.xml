@@ -209,6 +209,8 @@
                                url-prefix="#{request.scheme}://#{request.serverName}:#{request.serverPort}#{request.contextPath}"/>
     </portal:resource-mappings>
   </portal:adf-portal-config>
+  <doclibC:adf-doclib-config xmlns="http://xmlns.oracle.com/webcenter/doclib/config"
+                             primaryConnectionName="UCMConnection"/>
   <mdsC:adf-mds-config version="11.1.1.000">
     <mds-config xmlns="http://xmlns.oracle.com/mds/config">
       <persistence-config>
@@ -274,6 +276,4 @@
       </cache-config>
     </mds-config>
   </mdsC:adf-mds-config>
-  <doclibC:adf-doclib-config xmlns="http://xmlns.oracle.com/webcenter/doclib/config"
-                             primaryConnectionName="UCMConnection"/>
 </adf-config>

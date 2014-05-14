@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
-                version="11.1.1.64.93" id="coursesPageDef"
+                version="11.1.1.64.93" id="trainingDetailPageDef"
                 Package="oracle.webcenter.portalapp.pages">
   <parameters>
-    <parameter id="page_info"
-               value="title=Courses;desc=;keywords=;createdBy=weblogic;createDate=2014-05-14T11:43:37;lastUpdatedBy=weblogic;lastUpdateDate=2014-05-14T11:43:51;permissionClass=oracle.webcenter.security.auth.HierarchicalResourcePermission;target=serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/courses.jspx;excluded=false;style="/>
-    <parameter id="page_title" value="Courses"/>
     <parameter id="page_parent"
                value="/oracle/webcenter/portalapp/pagehierarchy/pages.xml"/>
+    <parameter id="page_info"
+               value="title=Training Detail;desc=;keywords=;createdBy=weblogic;createDate=2014-05-14T11:44:07;lastUpdatedBy=weblogic;lastUpdateDate=2014-05-14T11:44:21;permissionClass=oracle.webcenter.security.auth.HierarchicalResourcePermission;target=serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/trainingDetail.jspx;excluded=false;style="/>
+    <parameter id="page_title" value="Training Detail"/>
   </parameters>
   <executables>
     <variableIterator id="variables"/>
@@ -18,19 +18,19 @@
               activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding">
       <parameters>
-        <parameter id="taskFlowInstId" value="${'trainingListPresenter'}"/>
-        <parameter id="datasourceType" value="${'dsTypeQueryExpression'}"/>
+        <parameter id="taskFlowInstId" value="${'trainingDetailPresenter'}"/>
+        <parameter id="datasourceType" value="${'dsTypeSingleNode'}"/>
         <parameter id="datasource"
-                   value="${'SELECT * FROM ora:t:IDC:GlobalProfile WHERE ora:p:xRegionDefinition LIKE \'RD_SCHOOL_TRAINING\'}"/>
+                   value="${'ucm#dDocName:'}${param.training_id}"/>
         <parameter id="templateCategory" value="${''}"/>
-        <parameter id="templateView" value="${'trainingList'}"/>
+        <parameter id="templateView" value="${'trainingItem'}"/>
         <parameter id="regionTemplate" value="${false}"/>
       </parameters>
     </taskFlow>
   </executables>
   <bindings/>
   <permission permissionClass="oracle.webcenter.security.auth.HierarchicalResourcePermission"
-              target="serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/courses.jspx"
+              target="serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/trainingDetail.jspx"
               xmlns="http://xmlns.oracle.com/adf/security">
     <privilege-map operation="create" privilege="create"/>
     <privilege-map operation="delete" privilege="delete"/>
