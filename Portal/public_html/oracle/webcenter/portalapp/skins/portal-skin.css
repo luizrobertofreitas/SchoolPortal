@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+/*
+   Author: @JRSim_UIX
+   Site: www.fishbowlsolutions.com
+   Blog: cfour.fishbowlsolutions.com
+   Updated: 26/6/11 20:30
+*/
+
+
+/***
+ * TODO::
+ * - Comment css
+ * - Clean up
+ * - reorder css syntax
+ */
+
+html {
+	height:100%;
+}
+
+body {
+	background:#dee8f6 url(/images/bg.png) repeat-x top;
+	height:100%;
+}
+
+#JS-container {
+	position:relative;
+	min-width:750px;
+	padding-bottom:40px;
+	min-height: 100%;
+}
+
+#JS-header {
+	position:relative;
+	background:url(/images/bg_head.png) no-repeat left bottom;
+	height:38px;
+}
+
+#JS-spaceLogo {
+	display: block;
+	height:32px;
+	background:url(/images/logo_oracle.png) no-repeat 6px 6px;
+	padding-left:140px;
+	text-decoration: none;
+}
+
+#JS-spaceLogo .currentSpace {
+	color:#00427b;
+	font-weight: bold;
+	line-height:32px;
+	height:32px;
+	font-size:1.3em
+}
+
+#JS-globalActions {
+	background:url(/images/bg_globalActions_cnr.png) no-repeat;
+	height:31px;
+	padding-left:86px;
+	position: absolute;
+	top:0px;
+	right:0px;
+}
+
+#JS-globalActions .linksList {
+	background:url(/images/bg_globalActions.png) repeat-x;
+	height:31px;
+}
+
+.linksList {
+	margin:0px;
+}
+
+.linksList li {
+	float:left;
+	list-style:none;
+}
+
+.linksList a {
+	display:block;
+	text-decoration: none;
+	color:#848484;
+	margin:0px 8px;
+	height:24px;
+	line-height:24px;
+	font-size:0.8em;
+}
+
+.linksList a:hover {
+	color:#5d6571;
+}
+
+.ico_home {
+	background:url(/images/ico_home.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+.ico_favourites {
+	background:url(/images/ico_fav.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+.ico_preferences {
+	background:url(/images/ico_settings.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+.ico_help {
+	background:url(/images/ico_search.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+.ico_logOut {
+	background:url(/images/ico_logout.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+
+#JS-contentContainer {
+	/*border-radius:6px 0px 0px 6px;*/
+	border:solid 1px #99bbe8;
+	border-right:0px;
+	border-left:0px;
+	background:#fff;
+	min-height:800px;
+}
+
+#JS-siteTabs {
+	height:26px;	
+}
+
+#JS-siteTabs .linksList span {
+	background:url(/images/tb_rgt.png) no-repeat right;
+	padding-right:60px;
+	display: block;
+	margin-right:-82px;
+	height:26px;
+	line-height:26px;
+	font-weight:bold;
+	color:#8f96a1;
+	font-size:1.1em;
+}
+
+#JS-siteTabs .linksList a {
+	background:url(/images/tb_bg.png) repeat-x;
+	display: block;
+	margin:0px 7px;
+	height:26px;
+}
+
+#JS-siteTabs .linksList li {
+	position:relative;
+	background:url(/images/tb_lft.png) no-repeat;
+	margin-left:34px;
+	height:26px;
+	z-index:1;	
+	opacity:0.7;
+}
+
+#JS-siteTabs .linksList li.active,
+#JS-siteTabs .linksList li:hover {
+	z-index:10;	
+	margin-top:1px;
+	opacity:1;
+}
+
+#JS-siteTabs .linksList .active span,
+#JS-siteTabs .linksList a:hover span {
+	color:#5d6571;
+}
+
+#JS-siteTabs .linksList b {
+	display: block;
+	height:26px;
+}
+
+#JS-siteTabs .linksList li:first-child {
+	margin-left:9px;
+}
+
+#JS-subNav {
+	background:#e3f1ff;
+	border-top:solid 1px #a2c5f3;
+	border-bottom:solid 1px #a2c5f3;
+	height:28px;
+	margin-top:5px;
+}
+
+#JS-subNav .linksList {
+	border-top:solid 1px #fff;	
+	border-bottom:solid 1px #e3f1ff;	
+	height:26px;
+}
+
+#JS-subNav .linksList a {
+	color:#8a94a1;
+	display: block;
+	padding: 0px 12px;
+	margin:0px 4px;
+}
+
+#JS-subNav .linksList .active a,
+#JS-subNav .linksList a:hover {
+	color:#5d6571;
+	font-weight:bold;
+	border:solid 1px #a2c5f3;
+	background-color:#c4dcf6;
+	padding: 0px 10px;
+	border-radius: 5px;
+}
+
+.ico_homeSpace {
+	background:url(/images/ico_homespace.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+.ico_mySpace {
+	background:url(/images/ico_myspace.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+.ico_teamSpace {
+	background:url(/images/ico_teamspace.png) no-repeat 0px 5px;
+	padding-left:20px;
+}
+
+.ico_oraclePortal {
+	background-image:url(/images/ico_ora.png);
+	background-repeat: no-repeat;
+	background-position: 4px 5px;
+	padding-left:28px !important;
+}
+
+.ico_RSS {
+	background-image:url(/images/ico_rss.png);
+	background-repeat: no-repeat;
+	background-position: 4px 5px;
+	padding-left:28px !important;
+}
+
+.ico_Maps {
+	background-image:url(/images/ico_maps.png);
+	background-repeat: no-repeat;
+	background-position: 4px 5px;
+	padding-left:28px !important;
+}
+
+#JS-footer {
+	position: absolute;
+	bottom:0px;
+	right:0px;
+	width:100%;
+}
+
+#JS-footContainer {
+	border:solid 1px #99bbe8;
+	color:#9b9b9b;
+	/*border-radius:6px 0px 0px 0px;*/
+	background:#fff;
+	line-height:30px;
+	font-size:0.8em;
+	border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+	padding:0px 10px;
+}
+
+#JS-footerLinks {
+	float:right;
+}
+
+#JS-footerLinks .linksList {
+	font-size:1.2em;
+}
+#JS-footerLinks .linksList a {
+	height:30px;
+	line-height:30px;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93" id="futureCoursesPageDef"
+                Package="oracle.webcenter.portalapp.pages">
+  <parameters>
+    <parameter id="page_parent"
+               value="/oracle/webcenter/portalapp/pagehierarchy/pages/myCoursesPages.xml"/>
+    <parameter id="page_info"
+               value="title=Future Courses;desc=;keywords=;createdBy=weblogic;createDate=2014-05-13T15:37:21;lastUpdatedBy=weblogic;lastUpdateDate=2014-05-13T15:37:43;permissionClass=oracle.webcenter.security.auth.HierarchicalResourcePermission;target=serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/futureCourses.jspx;excluded=false;style="/>
+    <parameter id="page_title" value="Future Courses"/>
+  </parameters>
+  <executables>
+    <variableIterator id="variables"/>
+    <page viewId="${preferenceBean.defaultPageTemplate}"
+          id="pageTemplateBinding" Refresh="ifNeeded"/>
+  </executables>
+  <bindings/>
+  <permission permissionClass="oracle.webcenter.security.auth.HierarchicalResourcePermission"
+              target="serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/futureCourses.jspx"
+              xmlns="http://xmlns.oracle.com/adf/security">
+    <privilege-map operation="create" privilege="create"/>
+    <privilege-map operation="delete" privilege="delete"/>
+    <privilege-map operation="edit" privilege="update"/>
+    <privilege-map operation="personalize" privilege="personalize"/>
+    <privilege-map operation="view" privilege="view"/>
+  </permission>
+</pageDefinition>

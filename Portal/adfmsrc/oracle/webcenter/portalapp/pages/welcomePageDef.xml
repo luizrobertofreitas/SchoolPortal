@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93" id="welcomePageDef"
+                Package="oracle.webcenter.portalapp.pages">
+  <parameters>
+    <parameter id="page_info"
+               value="title=welcome;desc=;keywords=;createdBy=weblogic;createDate=2014-05-13T15:33:55;lastUpdatedBy=weblogic;lastUpdateDate=2014-05-13T15:33:55;permissionClass=oracle.webcenter.security.auth.HierarchicalResourcePermission;target=serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/welcome.jspx;excluded=false;style="/>
+    <parameter id="page_title" value="welcome"/>
+  </parameters>
+  <executables>
+    <variableIterator id="variables"/>
+    <page viewId="${preferenceBean.defaultPageTemplate}"
+          id="pageTemplateBinding" Refresh="ifNeeded"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

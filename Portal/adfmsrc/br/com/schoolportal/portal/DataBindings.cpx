@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="br.com.schoolportal.portal" ClientType="Generic"
+             PageMapClass="oracle.jbo.uicli.mom.DynamicPageMapImpl"
+             BasePageDefPackageName="pageDefs">
+  <pageMap>
+    <page path="/oracle/webcenter/portalapp/pages/navigation-renderer.jspx"
+          usageId="portal_navigation_rendererPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/home.jspx"
+          usageId="portal_homePageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/login.jspx"
+          usageId="portal_loginPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/error.jspx"
+          usageId="portal_errorPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pagetemplates/pageTemplate_globe.jspx"
+          usageId="portal_pageTemplate_globePageDef"/>
+    <page path="/oracle/webcenter/portalapp/pagetemplates/pageTemplate_swooshy.jspx"
+          usageId="portal_pageTemplate_swooshyPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/welcome.jspx"
+          usageId="br_com_schoolportal_portal_welcomePageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/courses.jspx"
+          usageId="br_com_schoolportal_portal_coursesPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/registration.jspx"
+          usageId="br_com_schoolportal_portal_registrationPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/prices.jspx"
+          usageId="br_com_schoolportal_portal_pricesPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/teachers.jspx"
+          usageId="br_com_schoolportal_portal_teachersPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/myCourses.jspx"
+          usageId="br_com_schoolportal_portal_myCoursesPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/pastCourses.jspx"
+          usageId="br_com_schoolportal_portal_pastCoursesPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/futureCourses.jspx"
+          usageId="br_com_schoolportal_portal_futureCoursesPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/aboutUs.jspx"
+          usageId="br_com_schoolportal_portal_aboutUsPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pagetemplates/SchoolTemplate.jspx"
+          usageId="br_com_schoolportal_portal_SchoolTemplatePageDef"/>
+  </pageMap>
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/portlet/bindings"
+             className="oracle.adf.model.portlet.binding.PortletBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adfdtinternal.view.faces.portlet.PortletDefinitionDTFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageDefinitionUsages>
+    <page id="portal_navigation_rendererPageDef"
+          path="oracle.webcenter.portalapp.pages.navigation_rendererPageDef"/>
+    <page id="portal_homePageDef"
+          path="oracle.webcenter.portalapp.pages.homePageDef"/>
+    <page id="portal_loginPageDef"
+          path="oracle.webcenter.portalapp.pages.loginPageDef"/>
+    <page id="portal_errorPageDef"
+          path="oracle.webcenter.portalapp.pages.errorPageDef"/>
+    <page id="portal_pageTemplate_globePageDef"
+          path="oracle.webcenter.portalapp.pagetemplates.pageTemplate_globePageDef"/>
+    <page id="portal_pageTemplate_swooshyPageDef"
+          path="oracle.webcenter.portalapp.pagetemplates.pageTemplate_swooshyPageDef"/>
+    <page id="br_com_schoolportal_portal_welcomePageDef"
+          path="oracle.webcenter.portalapp.pages.welcomePageDef"/>
+    <page id="br_com_schoolportal_portal_coursesPageDef"
+          path="oracle.webcenter.portalapp.pages.coursesPageDef"/>
+    <page id="br_com_schoolportal_portal_registrationPageDef"
+          path="oracle.webcenter.portalapp.pages.registrationPageDef"/>
+    <page id="br_com_schoolportal_portal_pricesPageDef"
+          path="oracle.webcenter.portalapp.pages.pricesPageDef"/>
+    <page id="br_com_schoolportal_portal_teachersPageDef"
+          path="oracle.webcenter.portalapp.pages.teachersPageDef"/>
+    <page id="br_com_schoolportal_portal_myCoursesPageDef"
+          path="oracle.webcenter.portalapp.pages.myCoursesPageDef"/>
+    <page id="br_com_schoolportal_portal_pastCoursesPageDef"
+          path="oracle.webcenter.portalapp.pages.pastCoursesPageDef"/>
+    <page id="br_com_schoolportal_portal_futureCoursesPageDef"
+          path="oracle.webcenter.portalapp.pages.futureCoursesPageDef"/>
+    <page id="br_com_schoolportal_portal_aboutUsPageDef"
+          path="oracle.webcenter.portalapp.pages.aboutUsPageDef"/>
+    <page id="br_com_schoolportal_portal_SchoolTemplatePageDef"
+          path="oracle.webcenter.portalapp.pagetemplates.SchoolTemplatePageDef"/>
+  </pageDefinitionUsages>
+</Application>

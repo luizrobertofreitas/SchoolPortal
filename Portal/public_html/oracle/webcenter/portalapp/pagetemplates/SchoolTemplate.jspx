@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+           xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>  
+  <af:pageTemplateDef var="attrs">
+		<af:resource type="javascript" source="/js/libs/modernizr-1.7.min.js"/>
+<!-- Site Container -->
+<div id="JS-container">
+	<!-- Header -->
+		<div id="JS-header">
+			<!-- Site Logo -->
+			<a href="#" id="JS-spaceLogo"><span class="currentSpace">Virtual Internet Education</span></a>
+			<!-- xSite Logo -->
+			<!-- Global Links -->
+			<div id="JS-globalActions">
+				<ul class="linksList">
+                                        <li><af:goLink destination="/admin" id="lAdmin" styleClass="ico_preferences" text="Administration" rendered="#{securityContext.authenticated}"/></li>
+					<li><a class="ico_favourites" href=""><span><af:outputText id="oUser" value="#{securityContext.userName}"/></span></a></li>
+                                        <li>
+                                           <af:commandLink styleClass="ico_logOut"
+                                              id="cmdLogin"
+                                              rendered="#{!securityContext.authenticated}"
+                                              text="Login" partialSubmit="true">
+                                                <af:showPopupBehavior
+                                                   triggerType="click"
+                                                   popupId="popLogin"/>
+                                           </af:commandLink>
+                                           <af:popup id="popLogin"
+                                               contentDelivery="lazyUncached">
+                                              <af:panelWindow id="dlgLogin" title="Login">
+                                                  <af:subform id="fLogin" defaultCommand="bLogin">
+                                                     <af:panelFormLayout id="pLogin">
+                                                         <af:inputText id="txtUser"
+                                                          value="#{o_w_s_l_LoginBackingBean.userName}"
+                                                          label="Username" required="true"/>
+                                                         <af:inputText id="txtPass"
+                                                          value="#{o_w_s_l_LoginBackingBean.password}"
+                                                          label="Password" secret="true"/>
+                                                           <f:facet name="footer">
+                                                             <af:commandButton text="Login" id="bLogin"
+                                                               action="#{o_w_s_l_LoginBackingBean.doLogin}"/>
+                                                           </f:facet>
+                                                      </af:panelFormLayout>
+                                                  </af:subform>
+                                              </af:panelWindow>
+                                            </af:popup>
+                                        </li>
+					<li><af:commandLink id="bLogout" rendered="#{securityContext.authenticated}" action="#{o_w_s_l_LoginBackingBean.doLogout}" styleClass="ico_logOut" text="Logout"/>
+                                        </li>
+				</ul>
+			</div>
+			<!-- xGlobal Links -->
+		</div>
+	<!-- xHeader -->
+	<!-- Site Content Area -->
+	<div id="main" role="main">
+		<!-- Main Site Tabs -->
+		<div id="JS-siteTabs" class="clearfix">
+				<ul class="linksList">
+         <c:forEach var="node" varStatus="vs"
+                              items="#{navigationContext.currentModel.listModel['startNode=/, includeStartNode=false']}">
+  
+                <c:if test="${node.selected}">
+                  <c:set value="${node.children}" var="childNodes" scope="session"/>
+                </c:if>
+            <li><af:goLink id="gLink" destination="#{node.goLinkPrettyUrl}"><span><b class=""><af:outputText value="#{node.title}"/></b></span></af:goLink></li>
+          </c:forEach>
+				</ul>
+		</div>
+		<!-- xMain Site Tabs -->
+		<!-- Site Content Container -->
+		<div id="JS-contentContainer">
+			<!-- Site SubNav List -->
+			<div id="JS-subNav" class="clearfix">
+					<ul class="linksList">
+            <c:if test="${childNodes ne null}">
+              <c:set var="childNodes" value="${navigationContext.currentModel.currentSelection.parent.children}"/>
+            </c:if>
+            <c:forEach items="#{childNodes}" var="node">
+              <li class="${node.selected ? 'active' : ''}"><af:goLink inlineStyle="#{node.selected ? 'font-weight:bold;' : ''}" id="sub" text="#{node.title}" destination="#{node.goLinkPrettyUrl}"/></li>
+            </c:forEach>
+					</ul>
+			</div>
+			<!-- xSite SubNav List -->
+			<!-- Composer -->
+			<af:panelGroupLayout id="widgetContainer" layout="vertical" styleClass="widgetContainer">
+				<af:skipLinkTarget/>
+				<af:facetRef facetName="content"/>
+			</af:panelGroupLayout>
+			<!-- xComposer -->
+		</div>
+		<!-- Site Content Container -->
+	</div>
+	<!-- xSite Content Area -->
+	<!-- Footer -->
+		<div id="JS-footer">
+			<div id="JS-footContainer" class="clearfix">
+				<!-- CopyRight -->
+				<span>Copyright (c) 2011, <a href="http://www.fishbowlsolutions.com">Fishbowl Solutions</a>. All rights reserved.</span>
+				<!-- xCopyRight -->
+				<!-- Footer Links -->
+				<div id="JS-footerLinks">
+						<ul class="linksList">
+							<li><a href="#"><span>About WebCenter Spaces</span></a></li>
+							<li><a href="#"><span>RSS</span></a></li>
+							<li><a href="#"><span>Administrator</span></a></li>
+							<li><a href="#"><span>Privacy Statement</span></a></li>
+						</ul>
+				</div>
+				<!-- xFooter Links -->
+			</div>
+		</div>
+	<!-- xFooter -->
+</div>
+<!-- xSite Container -->
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>johnTemplate</display-name>
+        <facet>
+          <facet-name>content</facet-name>
+        </facet>
+      </component>
+    </af:xmlContent>
+  </af:pageTemplateDef>
+</jsp:root>
