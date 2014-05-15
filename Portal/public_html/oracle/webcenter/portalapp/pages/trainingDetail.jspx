@@ -2,14 +2,28 @@
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
           xmlns:f="http://java.sun.com/jsf/core"
           xmlns:h="http://java.sun.com/jsf/html"
-          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:pe="http://xmlns.oracle.com/adf/pageeditor"
+          xmlns:cust="http://xmlns.oracle.com/adf/faces/customizable">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <f:view>
     <af:document id="d1">
       <af:form id="f1" usesUpload="true">
         <af:pageTemplate value="#{bindings.pageTemplateBinding.templateModel}" id="pt1">
           <f:facet name="content">
-            <af:region value="#{bindings.doclibcontentpresenter1.regionModel}" id="r1"/>
+            <af:panelGroupLayout layout="vertical" id="pgl1">
+                <af:outputText value="teste" id="ot1"/>
+                <br/>
+                <br/>
+              <pe:pageCustomizable id="pageCustomizable1">
+                <cust:panelCustomizable id="panelCustomizable1"
+                                        layout="scroll"/>
+                <f:facet name="editor">
+                  <pe:pageEditorPanel id="pep1"/>
+                </f:facet>
+              </pe:pageCustomizable>
+              <af:region value="#{bindings.doclibcontentpresenter1.regionModel}" id="r1"/>
+            </af:panelGroupLayout>
           </f:facet>
         </af:pageTemplate>
       </af:form>

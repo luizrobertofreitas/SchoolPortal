@@ -4,7 +4,7 @@
                 Package="oracle.webcenter.portalapp.pages">
   <parameters>
     <parameter id="page_info"
-               value="title=Courses;desc=;keywords=;createdBy=weblogic;createDate=2014-05-14T11:43:37;lastUpdatedBy=weblogic;lastUpdateDate=2014-05-14T11:43:51;permissionClass=oracle.webcenter.security.auth.HierarchicalResourcePermission;target=serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/courses.jspx;excluded=false;style="/>
+               value="title=courses;desc=;keywords=;createdBy=weblogic;createDate=2014-05-14T16:22:09;lastUpdatedBy=weblogic;lastUpdateDate=2014-05-14T16:22:09;permissionClass=oracle.webcenter.security.auth.HierarchicalResourcePermission;target=serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/courses.jspx;excluded=false;style="/>
     <parameter id="page_title" value="Courses"/>
     <parameter id="page_parent"
                value="/oracle/webcenter/portalapp/pagehierarchy/pages.xml"/>
@@ -21,12 +21,15 @@
         <parameter id="taskFlowInstId" value="${'trainingListPresenter'}"/>
         <parameter id="datasourceType" value="${'dsTypeQueryExpression'}"/>
         <parameter id="datasource"
-                   value="${'SELECT * FROM ora:t:IDC:GlobalProfile WHERE ora:p:xRegionDefinition LIKE \'RD_SCHOOL_TRAINING\'}"/>
+                   value="${'SELECT * FROM ora:t:IDC:GlobalProfile WHERE ora:p:xRegionDefinition = \'RD_SCHOOL_TRAINING\''}"/>
         <parameter id="templateCategory" value="${''}"/>
         <parameter id="templateView" value="${'trainingList'}"/>
         <parameter id="regionTemplate" value="${false}"/>
       </parameters>
     </taskFlow>
+    <taskFlow id="pageeditorpanel"
+              taskFlowId="#{pageEditorBean.pageEditorPanel}"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings/>
   <permission permissionClass="oracle.webcenter.security.auth.HierarchicalResourcePermission"

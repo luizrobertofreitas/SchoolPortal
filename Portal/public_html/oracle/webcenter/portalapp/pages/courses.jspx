@@ -4,7 +4,8 @@
           xmlns:h="http://java.sun.com/jsf/html"
           xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
           xmlns:pe="http://xmlns.oracle.com/adf/pageeditor"
-          xmlns:dt="http://xmlns.oracle.com/webcenter/content/templates">
+          xmlns:dt="http://xmlns.oracle.com/webcenter/content/templates"
+          xmlns:cust="http://xmlns.oracle.com/adf/faces/customizable">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <f:view>
     <af:document id="d1">
@@ -12,8 +13,20 @@
         <af:pageTemplate value="#{bindings.pageTemplateBinding.templateModel}" id="pt1">
           <f:facet name="content">
             <af:panelGroupLayout layout="vertical" id="pgl1">
-                <af:goLink id="create" destination="http://192.168.57.27:16200/cs/resources/wcm/custom/sitestudio/contentwizard/webcenter/contentwizard.hcsp?dDocType=Document&amp;cpRegDef=RD_SCHOOL_TRAINING&amp;dSecurityGroup=Public&amp;cpIframe=true&amp;forceLogin=1" targetFrame="_blank" text="Create New"/>
-                <af:region value="#{bindings.doclibcontentpresenter1.regionModel}" id="r1"/>
+              
+              <af:goLink id="create" destination="http://192.168.57.27:16200/cs/resources/wcm/custom/sitestudio/contentwizard/webcenter/contentwizard.hcsp?dDocType=Document&amp;cpRegDef=RD_SCHOOL_TRAINING&amp;dSecurityGroup=Public&amp;cpIframe=true&amp;forceLogin=1" targetFrame="_blank" text="Create New"/>
+              
+              <br/><br/><br/>
+              
+              <pe:pageCustomizable id="pageCustomizable1">
+                <cust:panelCustomizable id="pc1">
+                    <af:region value="#{bindings.doclibcontentpresenter1.regionModel}" id="r1"/>
+                </cust:panelCustomizable>
+                <f:facet name="editor">
+                  <pe:pageEditorPanel id="pep1"/>
+                </f:facet>
+              </pe:pageCustomizable>
+              
             </af:panelGroupLayout>
           </f:facet>
         </af:pageTemplate>
