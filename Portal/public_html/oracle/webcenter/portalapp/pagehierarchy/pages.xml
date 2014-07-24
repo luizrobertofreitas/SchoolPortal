@@ -16,4 +16,6 @@
            hidden="false" shared="false" hasSubPages="false" id="welcome"/>
   <pageDef contentMRef="/oracle/webcenter/portalapp/pages/courses.jspx"
            hidden="false" shared="false" hasSubPages="false" id="courses"/>
+  <pageDef contentMRef="/oracle/webcenter/portalapp/pages/forum.jspx"
+           hidden="false" shared="false" hasSubPages="false" id="forum"/>
 </pagesDef>

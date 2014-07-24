@@ -39,6 +39,8 @@
           usageId="br_com_schoolportal_portal_SchoolTemplatePageDef"/>
     <page path="/oracle/webcenter/portalapp/pages/trainingDetail.jspx"
           usageId="br_com_schoolportal_portal_trainingDetailPageDef"/>
+    <page path="/oracle/webcenter/portalapp/pages/forum.jspx"
+          usageId="br_com_schoolportal_portal_forumPageDef"/>
   </pageMap>
   <definitionFactories>
     <factory nameSpace="http://xmlns.oracle.com/portlet/bindings"
@@ -83,5 +85,7 @@
           path="oracle.webcenter.portalapp.pagetemplates.SchoolTemplatePageDef"/>
     <page id="br_com_schoolportal_portal_trainingDetailPageDef"
           path="oracle.webcenter.portalapp.pages.trainingDetailPageDef"/>
+    <page id="br_com_schoolportal_portal_forumPageDef"
+          path="oracle.webcenter.portalapp.pages.forumPageDef"/>
   </pageDefinitionUsages>
 </Application>

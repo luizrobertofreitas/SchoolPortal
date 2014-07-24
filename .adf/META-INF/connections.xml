@@ -1,5 +1,31 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="Discussions" className="oracle.adf.mbean.share.connection.webcenter.forum.ForumConnection" xmlns="">
+      <Factory className="oracle.adf.mbean.share.connection.webcenter.forum.ForumConnectionFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="forum.url">
+            <Contents>http://localhost:8890/owc_discussions</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="admin.user">
+            <Contents>weblogic</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="connection.time.out">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="policy.uri.for.auth.access">
+            <Contents>oracle/wss10_saml_token_client_policy</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="policy.uri.for.public.access">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="recipient.key.alias">
+            <Contents/>
+         </StringRefAddr>
+         <StringRefAddr addrType="adapter.name">
+            <Contents>Jive</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
    <Reference name="UCMConnection" className="oracle.vcr.jam.JamRepository" xmlns="">
       <Factory className="oracle.vcr.jam.JamRepositoryFactory"/>
       <RefAddresses>
@@ -31,7 +57,7 @@
             <Contents>socket</Contents>
          </StringRefAddr>
          <StringRefAddr addrType="oracle.stellent.jcr.configuration.server.host">
-            <Contents>localhost</Contents>
+            <Contents>192.168.57.62</Contents>
          </StringRefAddr>
          <StringRefAddr addrType="oracle.stellent.jcr.configuration.server.port">
             <Contents>4444</Contents>

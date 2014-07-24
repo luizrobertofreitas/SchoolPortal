@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee">
+  <application>
+    <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
+    <resource-bundle>
+      <base-name>oracle.webcenter.collab.forum.model.resource.ForumBundle</base-name>
+      <var>forumModelBundle</var>
+    </resource-bundle>
+      <resource-bundle>
+         <base-name>oracle.webcenter.collab.forum.view.resource.ForumBundle</base-name>
+         <var>forumViewBundle</var>
+      </resource-bundle>
+  </application>
+</faces-config>

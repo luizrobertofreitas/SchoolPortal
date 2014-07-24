@@ -153,14 +153,6 @@
       false
     </applicationStriping>
   </portlet:adf-portlet-config>
-  <collabC:adf-collaboration-config>
-    <service-config xmlns="http://xmlns.oracle.com/webcenter/collab/config"
-                    serviceId="oracle.webcenter.collab.rtc">
-      <!-- The currently selected RTC connection -->
-      <!--property name="selected.connection" value=""/-->
-      <property name="auto.login" value="false"/>
-    </service-config>
-  </collabC:adf-collaboration-config>
   <adf-tagging-config xmlns="http://xmlns.oracle.com/webcenter/tagging/config"/>
   <pe:page-editor-config>
     <pe:security-config>
@@ -211,6 +203,28 @@
   </portal:adf-portal-config>
   <doclibC:adf-doclib-config xmlns="http://xmlns.oracle.com/webcenter/doclib/config"
                              primaryConnectionName="UCMConnection"/>
+  <collabC:adf-collaboration-config>
+    <service-config xmlns="http://xmlns.oracle.com/webcenter/collab/config"
+                    serviceId="oracle.webcenter.collab.rtc">
+      <!-- The currently selected RTC connection -->
+      <!--property name="selected.connection" value=""/-->
+      <property name="auto.login" value="false"/>
+    </service-config>
+    <service-config xmlns="http://xmlns.oracle.com/webcenter/collab/config"
+                    serviceId="oracle.webcenter.collab.forum">
+      <!-- The currently selected connection -->
+      <!--property name="selected.connection" value=""/-->
+      <property name="auto.login" value="false"/>
+      <property name="selected.connection" value="Discussions"/>
+    </service-config>
+    <service-config xmlns="http://xmlns.oracle.com/webcenter/collab/config"
+                    serviceId="oracle.webcenter.collab.announcement">
+      <!-- The currently selected connection -->
+      <!--property name="selected.connection" value=""/-->
+      <property name="auto.login" value="false"/>
+      <property name="selected.connection" value="Discussions"/>
+    </service-config>
+  </collabC:adf-collaboration-config>
   <mdsC:adf-mds-config version="11.1.1.000">
     <mds-config xmlns="http://xmlns.oracle.com/mds/config">
       <persistence-config>
@@ -252,6 +266,8 @@
           <namespace path="/oracle/webcenter/siteresources/shared"
                      metadata-store-usage="WebCenterFileMetadataStore"/>
           <namespace path="/oracle/webcenter/quicklinks/scopedMD"
+                     metadata-store-usage="WebCenterFileMetadataStore"/>
+          <namespace path="/oracle/webcenter/collab/forum/scopedMD"
                      metadata-store-usage="WebCenterFileMetadataStore"/>
         </metadata-namespaces>
         <metadata-store-usages>

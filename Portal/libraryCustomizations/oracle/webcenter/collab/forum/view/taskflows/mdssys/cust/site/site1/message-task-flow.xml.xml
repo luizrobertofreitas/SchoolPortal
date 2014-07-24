@@ -1,0 +1,14 @@
+<mds:customization version="11.1.1.64.93"
+                   xmlns:mds="http://xmlns.oracle.com/mds">
+  <mds:insert before="forum-message(xmlns(mds_ns1=http://xmlns.oracle.com/adf/controller))/mds_ns1:exception-handler"
+              parent="forum-message">
+    <managed-bean id="s1_3" xmlns="http://xmlns.oracle.com/adf/controller">
+      <managed-bean-name id="s1_2">backing_CustomMBean</managed-bean-name>
+      <managed-bean-class id="s1_4">br.com.schoolportal.view.mbeans.CustomMBean</managed-bean-class>
+      <managed-bean-scope id="s1_1">request</managed-bean-scope>
+    </managed-bean>
+  </mds:insert>
+</mds:customization>
+
+
+

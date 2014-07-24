@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1">
+      <property
+         name="y">409.46875</property>
+      <property
+         name="x">110.04492</property>
+   </OverallProperties>
+   <View
+      id="View2">
+      <property
+         name="activityId">ForumPicker</property>
+      <property
+         name="page">/oracle/webcenter/collab/forum/view/jsf/fragments/ForumPicker.jsff</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ForumPicker&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">254.5</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">297.54492</property>
+   </View>
+   <MethodCall
+      id="MethodCall3">
+      <property
+         name="activityId">doInitializeForumPicker</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>doInitializeForumPicker&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">99.53125</property>
+      <property
+         name="x">110.04492</property>
+   </MethodCall>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule4">
+      <property
+         name="activityId">*</property>
+      <property
+         name="y">255.0</property>
+      <property
+         name="x">110.04492</property>
+   </WildcardControlFlowRule>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="WildcardControlFlowRule4"
+      to="View2">
+      <property
+         name="fromOutcome">success</property>
+      <property
+         name="sdm:polyPoints">R50,146.04492,255.51562,256.54492,254.51562,L50</property>
+   </ControlFlowCase>
+</SDM>

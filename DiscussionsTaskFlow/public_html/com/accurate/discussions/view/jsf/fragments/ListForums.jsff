@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:loadBundle basename="oracle.webcenter.collab.forum.model.resource.ForumBundle" var="resForum" />
+
+  <af:panelGroupLayout id="pgl1">
+    <af:outputText value="Forums" id="ot4" />
+    <br/>
+    <af:iterator value="#{forumMBean.forums}" var="forum" id="i1">
+        <af:outputText value="#{forum.name}" id="ot2"/> - 
+        <af:commandLink text="Listar Tópicos" 
+                        action="listTopics" 
+                        actionListener="#{forumMBean.selectForumActionListener}"
+                        id="cl1">
+            <af:setPropertyListener from="#{forum.id}" to="#{forumMBean.selectedForumId}" type="action" />
+        </af:commandLink>
+        <br/>
+    </af:iterator>
+    
+  </af:panelGroupLayout>
+</jsp:root>

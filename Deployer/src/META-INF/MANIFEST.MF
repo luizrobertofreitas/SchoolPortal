@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: Accurate
+Implementation-Title: accurate.discussions.taskflow
+Extension-Name: extend.portal.accurate.discussions.taskflow
+Specification-Version: 1.0.0
+Implementation-Version: 1.0.0
+Implementation-Vendor: Oracle
+

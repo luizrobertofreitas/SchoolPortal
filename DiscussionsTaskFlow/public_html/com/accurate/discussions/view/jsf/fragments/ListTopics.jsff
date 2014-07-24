@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout id="pgl1">
+    <af:outputText value="Topicos do forum" id="ot4" />
+    <br/>
+    <af:iterator value="#{topicMBean.topics}" var="topic" id="i1">
+        <af:outputText value="#{topic.subject}" id="ot2"/><br/>
+    </af:iterator>
+    <br/>
+    <af:commandLink action="back" text="Voltar" id="cl1"/>
+  </af:panelGroupLayout>
+</jsp:root>

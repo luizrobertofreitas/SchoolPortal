@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">ListForums</property>
+      <property
+         name="page">/com/accurate/discussions/view/jsf/fragments/ListForums.jsff</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ListForums&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">143.5625</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">590.8506</property>
+   </View>
+   <View
+      id="View5">
+      <property
+         name="activityId">ListTopics</property>
+      <property
+         name="page">/com/accurate/discussions/view/jsf/fragments/ListTopics.jsff</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ListTopics&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">377.53125</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">572.5</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View2"
+      to="View5">
+      <property
+         name="fromOutcome">listTopics</property>
+      <property
+         name="sdm:polyPoints">B44,587.3506,197.57812,569.0,323.03867,T44</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View5"
+      to="View2">
+      <property
+         name="fromOutcome">back</property>
+      <property
+         name="sdm:polyPoints">T56,576.0,323.54688,594.3506,198.08531,B56</property>
+   </ControlFlowCase>
+</SDM>

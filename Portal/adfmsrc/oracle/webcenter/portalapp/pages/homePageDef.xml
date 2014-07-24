@@ -13,8 +13,8 @@
     <variableIterator id="variables"/>
     <page viewId="${preferenceBean.defaultPageTemplate}"
           id="pageTemplateBinding" Refresh="ifNeeded"/>
-    <taskFlow id="pageeditorpanel"
-              taskFlowId="#{pageEditorBean.pageEditorPanel}"
+    <taskFlow id="forumtaskflow1"
+              taskFlowId="/WEB-INF/com/accurate/discussions/view/taskflows/forum-taskflow.xml#forum-taskflow"
               activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>

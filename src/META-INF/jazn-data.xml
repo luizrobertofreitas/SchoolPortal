@@ -3604,6 +3604,81 @@
                                 <name>oracle.webcenter.portalapp.pagetemplates.SchoolTemplatePageDef</name>
                                 <actions>view</actions>
                             </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/main-task-flow.xml#forum-main</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/miniview-task-flow.xml#forum-miniview</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/popularTopic-task-flow.xml#forum-popularTopic</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/recentTopic-task-flow.xml#forum-recentTopic</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/watchedTopic-task-flow.xml#forum-watchedTopic</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/watchedForum-task-flow.xml#forum-watchedForum</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/config-task-flow.xml#forum-config-view</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/link-existing-task-flow.xml#forum-link-existing</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/link-new-task-flow.xml#forum-link-new</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/message-task-flow.xml#forum-message</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/resource-view-task-flow.xml#forum-resource-view</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/scope-config-task-flow.xml#forum-scope-config-view</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/oracle/webcenter/collab/forum/view/taskflows/.*</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/com/accurate/discussions/view/taskflows/message-task-flow.xml#forum-message</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.controller.security.TaskFlowPermission</class>
+                                <name>/WEB-INF/com/accurate/discussions/view/taskflows/forum-taskflow.xml#forum-taskflow</name>
+                                <actions>view</actions>
+                            </permission>
                         </permissions>
                     </grant>
                     <grant>
@@ -3740,6 +3815,21 @@
                                 <class>oracle.webcenter.security.auth.HierarchicalResourcePermission</class>
                                 <name>serviceID=oracle.webcenter.page,scopeID=s8bba98ff_4cbb_40b8_beee_296c916a23ed,resourceID=/oracle/webcenter/portalapp/pages/myCourses.jspx</name>
                                 <actions>personalize,view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>oracle.webcenter.collab.forum.view.pageDefs.oracle_webcenter_collab_forum_view_jsf_pages_ForumLinkExistingViewPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>oracle.webcenter.collab.forum.view.pageDefs.oracle_webcenter_collab_forum_view_jsf_pages_ForumLinkNewViewPageDef</name>
+                                <actions>view</actions>
+                            </permission>
+                            <permission>
+                                <class>oracle.adf.share.security.authorization.RegionPermission</class>
+                                <name>oracle.webcenter.collab.forum.view.pageDefs.oracle_webcenter_collab_forum_view_jsf_pages_ForumLinkResourceViewPageDef</name>
+                                <actions>view</actions>
                             </permission>
                         </permissions>
                     </grant>

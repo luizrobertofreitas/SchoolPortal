@@ -35,4 +35,8 @@
   <library-ref>
     <library-name>oracle.sdp.client</library-name>
   </library-ref>
+  <library-ref>
+    <library-name>oracle.webcenter.forum.dependency</library-name>
+    <specification-version>11.1.1</specification-version>
+  </library-ref>
 </weblogic-application>

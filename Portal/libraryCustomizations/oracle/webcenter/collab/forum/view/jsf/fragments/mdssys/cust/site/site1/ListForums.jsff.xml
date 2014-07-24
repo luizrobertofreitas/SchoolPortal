@@ -1,0 +1,11 @@
+<mds:customization version="11.1.1.64.93"
+                   xmlns:mds="http://xmlns.oracle.com/mds">
+  <mds:insert parent="frmlfpgl1" position="last"
+              xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                   value="Lizão #{backing_CustomMBean.text}" id="s1ot1"/>
+  </mds:insert>
+</mds:customization>
+
+
+
